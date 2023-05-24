@@ -1,6 +1,6 @@
 import numpy as np 
 import tensorflow as tf
-from laberintoCondiff_2 import laberinto
+from laberintoCondiff import laberinto
 
 from datetime import datetime
 import io
@@ -127,7 +127,7 @@ def arrayentero(array,dim, num=None):
                 aux=np.zeros(shape=[ventana])
                 aux[0:len(array)]=array
                 X_array.append(aux)
-        return np.median(X_array)
+        return X_array
 
 #leyemos los datos
 #-------------------------------------------------------------------------------------------------
@@ -153,13 +153,6 @@ def leerDatos(metodo):
     Y_trainf=[]
     X_trainf=[]
     """
-    X_train=np.load("datos"+str(metodo)+"/1.npy")
-    aux1,aux2=arrayentero(X_train,ventana,0)
-    #aux=np.zeros(shape=[4000,2])
-    #aux[0:len(X_train)]=X_train
-    X_trainf.append(aux1[0])
-    Y_trainf.append(aux2[0])"""
-
     X_train=np.load("datos"+str(metodo)+"/1.npy")
     aux1,aux2=arrayentero(X_train,ventana,0)
     #aux=np.zeros(shape=[4000,2])
@@ -352,11 +345,11 @@ def leerDatos(metodo):
     #aux[0:len(X_train)]=X_train
     X_trainf.append(aux1[0])
     Y_trainf.append(aux2[0])
-
-
+    """
+    """
 
     #-------------------------------------------------------------------------------------------------
-
+    """
     X_train=np.load("datos"+str(metodo)+"/1001.npy")
     aux1,aux2=arrayentero(X_train,ventana,1)
     #aux=np.zeros(shape=[4000,2])
@@ -553,7 +546,7 @@ def leerDatos(metodo):
     #aux[0:len(X_train)]=X_train
     X_trainf.append(aux1[0])
     Y_trainf.append(aux2[0])
-
+    
     #---------------------------------------------------------------------------------------------
 
 
@@ -754,6 +747,7 @@ def leerDatos(metodo):
     X_trainf.append(aux1[0])
     Y_trainf.append(aux2[0])
     #---------------------------------------------------------------------
+    """
     X_train=np.load("datos"+str(metodo)+"/3001.npy")
     aux1,aux2=arrayentero(X_train,ventana,3)
     #aux=np.zeros(shape=[4000,2])
@@ -944,7 +938,9 @@ def leerDatos(metodo):
     #aux[0:len(X_train)]=X_train
     X_trainf.append(aux1[0])
     Y_trainf.append(aux2[0])
+    """
     #------------------------------------------------------------------------------------
+    """
     X_train=np.load("datos"+str(metodo)+"/4001.npy")
     aux1,aux2=arrayentero(X_train,ventana,4)
     #aux=np.zeros(shape=[4000,2])
@@ -1138,7 +1134,7 @@ def leerDatos(metodo):
 
     print(np.max(X_trainf))
     print(np.min(X_trainf))
-
+    """
     #capturamos los datos del usuario habitual 
     #-----------------------------------------------------------------------
     """
@@ -1167,18 +1163,37 @@ X_trainf,Y_train=leerDatos(metodo)
 #-----------------------------------------------------------------------------------------------
 #cambiar
 #X_trainf=X_trainf/200
+#X_trainf=X_trainf/200
+
+
 
 
 Xtrain,Ytrain=leerDatos(3)
-Xtrain=Xtrain/200
+#Xtrain=Xtrain/200
 
 X_trainf=np.concatenate([X_trainf, np.reshape(Xtrain, (len(Xtrain),ventana,1))], axis=2)
-print(X_trainf)
+print(len(X_trainf))
+print(len(Ytrain))
+"""
+for i in range(1,30):
+
+    datos1,datos2=laberinto()
+    aux1,aux2=arrayentero(datos1,ventana,0)
+    aux3,aux4=arrayentero(datos2,ventana,0)
+    prueba=np.concatenate([aux3, np.reshape(aux1, (1,ventana,1))], axis=2)
+    X_trainf=np.concatenate([prueba,X_trainf],axis=0)
+    Y_train=np.concatenate([aux2,Y_train],axis=0)
+    print(len(X_trainf))
+    print(len(Y_train))
+
+"""
 
 #print(X_trainf)
+print('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+print((X_trainf))
+print(Ytrain)
 
-
-metodo=5
+#metodo=5
 #-----------------------------------------------------------------------------------------------
 if(metodo==1):
     X_trainf=X_trainf/640
@@ -1191,10 +1206,12 @@ if(metodo==3):
 
     
 #----------------------------------------------------------------------------------------------------------------------
-
+"""
 print(np.max(X_trainf))
 print(np.min(X_trainf))
 print(X_trainf )
+"""
+
 
 #print(X_trainf)
 # [?,250,2,1], [3,3,1,25].
@@ -1207,77 +1224,13 @@ model=tf.keras.Sequential([
     tf.keras.layers.MaxPooling2D((2, 1)),
     tf.keras.layers.Flatten(),
     tf.keras.layers.Dense(25, activation='relu'),
-    tf.keras.layers.Dense(5,activation=tf.nn.softmax)
+    tf.keras.layers.Dense(3,activation=tf.nn.softmax)
 
  
 
 
 ])
 
-"""
-tf.keras.layers.Reshape((ventana,3,1),input_shape=np.shape(X_trainf [0])),
-    tf.keras.layers.Conv2D(filters=64, kernel_size=(6,3), activation='relu'),
-    tf.keras.layers.MaxPooling2D((4, 1)),
-    tf.keras.layers.Conv2D(filters=8, kernel_size=(4,1), activation='tanh'),
-    tf.keras.layers.MaxPooling2D((2, 1)),
-    tf.keras.layers.BatchNormalization(),
-    tf.keras.layers.Flatten(),
-    tf.keras.layers.Dense(25, activation='relu'),
-    tf.keras.layers.Dense(5,activation=tf.nn.softmax)]
-
-"""
-
-#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-"""
-        tf.keras.layers.Reshape((ventana,3,1),input_shape=np.shape(X_trainf [0])),
-   tf.keras.layers.Conv2D(filters=20, kernel_size=(10,3), activation='relu'),
-    tf.keras.layers.MaxPooling2D((20, 1)),
-    tf.keras.layers.BatchNormalization(),
-    tf.keras.layers.Flatten(),                                                       acuraccy 87% ventana 600
-    tf.keras.layers.Dense(50, activation='relu'),
-    tf.keras.layers.Dense(5,activation=tf.nn.softmax)]
-"""
-"""
-tf.keras.layers.Reshape((ventana,1,1),input_shape=np.shape(X_trainf [0])),
-   tf.keras.layers.Conv2D(filters=30, kernel_size=(10,1), activation='relu'),
-    tf.keras.layers.MaxPooling2D((2, 1)),
-    tf.keras.layers.BatchNormalization(),
-    tf.keras.layers.Flatten(),
-    tf.keras.layers.Dense(50, activation='relu'),
-    tf.keras.layers.Dense(5,activation=tf.nn.softmax)]
-"""
-
-#
-#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-"""
-    tf.keras.layers.Conv2D(filters=30, kernel_size=(10,2), activation='relu', input_shape=(ventana,2,1)),
-    tf.keras.layers.MaxPooling2D((2, 1)),
-    tf.keras.layers.BatchNormalization(),
-    tf.keras.layers.Flatten(),
-    tf.keras.layers.Dense(50, activation='relu'),
-    tf.keras.layers.Dense(7,activation=tf.nn.softmax)])/////////diff 56% de acuracy  // hipo 62% de acuraccy //diff con hipo ventana de 600 y kernel (10,3) filtro 30 87% acuracy
-                                                            //diff con hipo ventana de 600 y kernel (50,3) filtro 64  62%acuraccy
-                                                            //diff con hipo ventana de 600 y kernel (10,3) filtro 64  81%acuraccy
-"""
-"""
-    tf.keras.layers.Flatten(input_shape=(ventana,2)),
-    tf.keras.layers.Dense(50, activation=tf.nn.relu),
-    tf.keras.layers.BatchNormalization(),
-    tf.keras.layers.Dense(50,activation=tf.nn.relu),
-    tf.keras.layers.Dense(6,activation=tf.nn.softmax)])////////////////diff 50% de acuracy  // hipo 81% de acurracy
-"""
-"""tf.keras.layers.Input(shape=(ventana,2)),
-    tf.keras.layers.GRU(units=32),
-    tf.keras.layers.Dense(7,activation=tf.nn.softmax)///////////diff 12% de acuracy, ventana 50  // hipo 12% ventana 1000
-
-"""
-"""tf.keras.layers.Input(shape=[300,2]),#el  1 es por que solo vamos a utilizar el blanco y negro si usasemos RGB 
-                                                    #tendriamos que poner 3 ya que son tres capas
-    tf.keras.layers.GRU(units=32),
-    tf.keras.layers.Dense(10,activation=tf.nn.softmax),#esto es para redes de clasificacion ya que nos coge el maximo y
-    #se convierte en uno y  10  ya que tenemos 10 categorias"""
 
 #compilamos el modelo 
 model.compile(optimizer='adam'
@@ -1299,7 +1252,7 @@ print('-------------------------------------------------------------------------
 
 
 model.save('path_to_my_model.h5')
-
+"""
 datos, datosxy=laberinto()
 datos=arrayentero(datos,ventana)
 
@@ -1310,3 +1263,4 @@ predict=model.predict(datos)
 print(predict)
 cad=np.bincount(np.argmax(predict, axis=1)).argmax()
 print(cad)
+"""
