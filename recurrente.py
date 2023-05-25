@@ -152,7 +152,7 @@ print(ventana)
 def leerDatos(metodo):
     Y_trainf=[]
     X_trainf=[]
-    """
+    
     X_train=np.load("datos"+str(metodo)+"/1.npy")
     aux1,aux2=arrayentero(X_train,ventana,0)
     #aux=np.zeros(shape=[4000,2])
@@ -345,7 +345,9 @@ def leerDatos(metodo):
     #aux[0:len(X_train)]=X_train
     X_trainf.append(aux1[0])
     Y_trainf.append(aux2[0])
-    """
+    
+
+
     """
 
     #-------------------------------------------------------------------------------------------------
@@ -747,7 +749,7 @@ def leerDatos(metodo):
     X_trainf.append(aux1[0])
     Y_trainf.append(aux2[0])
     #---------------------------------------------------------------------
-    """
+    
     X_train=np.load("datos"+str(metodo)+"/3001.npy")
     aux1,aux2=arrayentero(X_train,ventana,3)
     #aux=np.zeros(shape=[4000,2])
@@ -1131,10 +1133,199 @@ def leerDatos(metodo):
     #aux[0:len(X_train)]=X_train
     X_trainf.append(aux1[0])
     Y_trainf.append(aux2[0])
+    #------------------------------------------------------------------------
+    X_train=np.load("datos"+str(metodo)+"/5001.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
 
+
+    X_train=np.load("datos"+str(metodo)+"/5002.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/5004.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/5004.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/5005.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/5006.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/5007.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/5008.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/5009.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/5010.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5011.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5012.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5014.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5014.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5015.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5016.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5017.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5018.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5019.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5020.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5021.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5022.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5024.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5024.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5025.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5026.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5027.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5028.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5029.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/5030.npy")
+    aux1,aux2=arrayentero(X_train,ventana,5)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
     print(np.max(X_trainf))
     print(np.min(X_trainf))
-    """
     #capturamos los datos del usuario habitual 
     #-----------------------------------------------------------------------
     """
@@ -1224,10 +1415,7 @@ model=tf.keras.Sequential([
     tf.keras.layers.MaxPooling2D((2, 1)),
     tf.keras.layers.Flatten(),
     tf.keras.layers.Dense(25, activation='relu'),
-    tf.keras.layers.Dense(3,activation=tf.nn.softmax)
-
- 
-
+    tf.keras.layers.Dense(6,activation=tf.nn.softmax)
 
 ])
 
@@ -1241,7 +1429,7 @@ X_trainf=tf.random.shuffle(X_trainf, seed=1234)
 Y_train=tf.random.shuffle(Y_train, seed=1234)
 #lo entrenamos
 model.fit(X_trainf,Y_train,
-            epochs=300,
+            epochs=30,
             batch_size=16,
             validation_split=0.1
             #callbacks=[tensorboard_callback, cm_callback],
@@ -1252,6 +1440,232 @@ print('-------------------------------------------------------------------------
 
 
 model.save('path_to_my_model.h5')
+
+def datoshabitual(metodo):
+    Y_trainf=[]
+    X_trainf=[]
+
+    X_train=np.load("datos"+str(metodo)+"/1.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/2.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/3.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/4.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/5.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/6.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/7.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/8.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/9.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/10.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/11.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/12.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/13.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/14.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/15.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/16.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/17.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/18.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+    X_train=np.load("datos"+str(metodo)+"/19.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+
+
+    X_train=np.load("datos"+str(metodo)+"/20.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/21.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/22.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/23.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/24.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/25.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/26.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/27.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/28.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/29.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_train=np.load("datos"+str(metodo)+"/30.npy")
+    aux1,aux2=arrayentero(X_train,ventana,0)
+    #aux=np.zeros(shape=[4000,2])
+    #aux[0:len(X_train)]=X_train
+    X_trainf.append(aux1[0])
+    Y_trainf.append(aux2[0])
+    X_trainf=np.array(X_trainf)
+    Y_train=np.array(Y_trainf)
+    print(X_trainf)
+    return X_trainf,Y_train
+
+
+
+X_trainf,Y_train=datoshabitual(metodo)
+
+Xtrain,Ytrain=datoshabitual(3)
+
+X_trainf=np.concatenate([X_trainf, np.reshape(Xtrain, (len(Xtrain),ventana,1))], axis=2)
+
+
+
+if(metodo==1):
+    X_trainf=X_trainf/640
+if(metodo==2):
+    X_trainf=X_trainf/200
+if(metodo==3):
+    #pensar
+    X_trainf=X_trainf/200
+
+predict=model.predict(X_trainf)
+#np.bincount(
+cad=np.bincount(np.argmax(predict, axis=1))
+cad=np.where(cad>0)
+np.save('categorias.npy',cad)
+
 """
 datos, datosxy=laberinto()
 datos=arrayentero(datos,ventana)

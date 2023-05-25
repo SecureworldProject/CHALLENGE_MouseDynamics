@@ -190,7 +190,8 @@ def laberinto():
                                     datos.append(hipo)
                                     deltax=mouse_pos[0]-last[0]
                                     deltay=mouse_pos[1]-last[1]
-                                    datosxy.append([deltax,deltay])
+                                    #datosxy.append([deltax,deltay])
+                                    datosxy.append([deltax,deltay,hipo])
                                     
                                     #print (datos[-1], datosxy[-1])
                                 
@@ -223,7 +224,8 @@ def laberinto():
             #print(tiempo_intervalo)
     # Cerrar Pygame
     pygame.quit()
-    return datos, datosxy
+    #return datos, datosxy
+    return datosxy
 #-------------------------------------------------------------------
 
 #ver que hacer con los datos y que devuelva los datos
@@ -232,16 +234,16 @@ if __name__ == "__main__":
     Datos, Datosxy=laberinto()
     Datos.pop(0)
     Datosxy.pop(0)
-    
+    """
     print(len(Datos))
     print(Datos)
     print("===============================")
     print(len(Datosxy))
     print(Datosxy)
-    
+    """
     milis= round((time.time() * 1000)) %1000
     #np.save('datos2/1.npy', Datos)
-    #np.save("datos2/hipo"+str(milis)+".npy", Datos)
-    #np.save("datos2/deltaxy"+str(milis)+".npy", Datosxy)
+    np.save("datos2/deltaxy/hipo"+str(milis)+".npy", Datos)
+    np.save("datos2/deltaxy/deltaxy"+str(milis)+".npy", Datosxy)
 
     

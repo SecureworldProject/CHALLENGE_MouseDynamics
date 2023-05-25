@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\datos2",
+    "\\datos2\\deltaxy"
   ],
-  "SelectedNode": "\\C:\\Users\\gomezbot\\Source\\Repos\\CHALLENGE_MouseDynamicschallengebueno",
+  "SelectedNode": "\\datos2\\deltaxy\\deltaxy14.npy",
   "PreviewInSolutionExplorer": false
 }

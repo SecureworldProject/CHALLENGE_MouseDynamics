@@ -14,14 +14,22 @@ def arrayentero(array,dim, num=None):
     #guardamos la dimension de la ventana en una variable
     ventana=dim
     if num is not None:
+        #if array[0]==0:
+        #   array=np.delete(array,0)
+        #return [[np.median(array),np.mean(array),np.std(array)]], [num]
         #recorremos todos los elementos del array hasta N-longitud de la ventana y lo guardamos en un nuevo array y generamos el array de etiquetas con el num
         for i in range(0,len(array)-ventana):
             X_array.append(array[i:ventana+i])
             Y_array.append([num])
         if len(X_array)==0:
-            aux=np.zeros(shape=[ventana,2])
-            aux[0:len(array)]=array
-            X_array.append(aux)
+            try:
+                aux=np.zeros(shape=[ventana,2])
+                aux[0:len(array)]=array
+                X_array.append(aux)
+            except:
+                aux=np.zeros(shape=[ventana])
+                aux[0:len(array)]=array
+                X_array.append(aux)
             Y_array.append([num])
         Y_array=np.array(Y_array)
         return X_array,Y_array
@@ -30,9 +38,14 @@ def arrayentero(array,dim, num=None):
         for i in range(0,len(array)-ventana):
             X_array.append(array[i:ventana+i,:])
         if len(X_array)==0:
-            aux=np.zeros(shape=[ventana,2])
-            aux[0:len(array)]=array
-            X_array.append(aux)
+            try:
+                aux=np.zeros(shape=[ventana,3])
+                aux[0:len(array)]=array
+                X_array.append(aux)
+            except:
+                aux=np.zeros(shape=[ventana])
+                aux[0:len(array)]=array
+                X_array.append(aux)
         return X_array
 
 
@@ -65,7 +78,7 @@ def executeChallenge():
         aux=aux/640
         datos=np.array([aux])
     else:
-        ventana=4000
+        ventana=900
         datos=laberinto()
         datos=arrayentero(datos,ventana)
         """
@@ -88,6 +101,10 @@ def executeChallenge():
     print(new_predictions)
     print(np.argmax(new_predictions, axis=1))
     cad=np.argmax(new_predictions, axis=1)
+    categorias=np.load("categorias.npy")
+    cat=np.where(cad==categorias[0])
+    if len(cat)!=0:
+        cad=0
     #y generamos el resultado
     cad="%d"%(cad)
     key = bytes(cad,'utf-8')
