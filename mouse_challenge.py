@@ -92,7 +92,8 @@ def executeChallenge():
     #cargamos el modelo
     #############################
     #cambiar la ruta si se pasa por el json
-    new_model = keras.models.load_model('path_to_my_model.h5')
+    url=props_dict["url"]
+    new_model = keras.models.load_model(url+'path_to_my_model.h5')
     #cerramos el lock
     lock.lockOUT("mouse_Dinamics")
     #predecimos la categoria de los nuevo datos
