@@ -105,11 +105,11 @@ def executeChallenge():
     categorias=np.load("categorias.npy")
     
     #modo empresarial
-    if props_dict['metodo']==1:
+    if props_dict['metodo']=='empresarial':
         cat=np.where(cad==categorias[0])
         if len(cat)!=0:
             cad=0
-    elif props_dict['metodo']==2:
+    elif props_dict['metodo']=='parental':
         cat=np.where(cad==categorias[0])
         if len(cat)!=0:
             cad=1
@@ -138,6 +138,6 @@ def executeChallenge():
 
 # esta parte del codigo no se ejecuta a no ser que sea llamada desde linea de comandos
 if __name__ == "__main__":
-    midict = {"url":"./","metodo":2}
+    midict = {"url":"./","metodo":'parental'}
     init(midict)
     executeChallenge()
