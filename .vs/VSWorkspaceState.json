@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\datos2",
-    "\\datos2\\deltaxy"
+    ""
   ],
-  "SelectedNode": "\\datos2\\deltaxy\\deltaxy14.npy",
+  "SelectedNode": "\\recurrente.py",
   "PreviewInSolutionExplorer": false
 }

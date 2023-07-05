@@ -103,9 +103,30 @@ def executeChallenge():
     print(np.argmax(new_predictions, axis=1))
     cad=np.argmax(new_predictions, axis=1)
     categorias=np.load("categorias.npy")
-    cat=np.where(cad==categorias[0])
-    if len(cat)!=0:
-        cad=0
+    
+    #modo empresarial
+    if props_dict['metodo']==1:
+        cat=np.where(cad==categorias[0])
+        if len(cat)!=0:
+            cad=0
+    elif props_dict['metodo']==2:
+        cat=np.where(cad==categorias[0])
+        if len(cat)!=0:
+            cad=1
+        else:
+            cad=0
+
+
+    """
+        if props_dict['metodo']==2:
+        if cad>7:
+            cad=1
+        else:
+            cad=0
+            
+
+
+    """
     #y generamos el resultado
     cad="%d"%(cad)
     key = bytes(cad,'utf-8')
@@ -117,6 +138,6 @@ def executeChallenge():
 
 # esta parte del codigo no se ejecuta a no ser que sea llamada desde linea de comandos
 if __name__ == "__main__":
-    midict = {}
+    midict = {"url":"./","metodo":2}
     init(midict)
     executeChallenge()
