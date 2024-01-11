@@ -112,9 +112,9 @@ def executeChallenge():
     elif props_dict['metodo']=='parental':
         cat=np.where(cad==categorias[0])
         if len(cat)!=0:
-            cad=1
+            cad='\0'
         else:
-            cad=0
+            cad='\u0001'
 
 
     """
